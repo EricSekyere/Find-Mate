@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<html lang="en">
+
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="#">
+            <strong>FindMate</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('index') }}">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signin') }}">Sign in</a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+    </nav>
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main class="text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</main>
+<!--Main Layout-->
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+    <hr>
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+                <i class="fa fa-facebook"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+                <i class="fa fa-twitter"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+                <i class="fa fa-google-plus"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+                <i class="fa fa-linkedin"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+                <i class="fa fa-dribbble"> </i>
+            </a>
+        </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="#"> Eric Sekyere</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+ 
+
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+</body>
+
+</html>
